@@ -5,8 +5,6 @@ const CreateQuote = () => {
     let navigate = useNavigate()
     let handleSubmit = (e) => {
         e.preventDefault()
-        //! data submission
-        //! navigate to home
         navigate('/home')
     }
     return (
@@ -44,7 +42,7 @@ const CreateQuote = () => {
                             Clear
                         </button>
                         <button
-                            onClick={handleSubmit}
+                             onClick={handleSubmit}
                             type="submit"
                             className="px-5 py-2 bg-[#883377] text-white rounded-md hover:bg-[#a34499] transition"
                         >
