@@ -1,6 +1,7 @@
 import React from 'react';
 import { useData } from '../context/AppContext';
 
+
 const AllQuotes = () => {
     const { api } = useData();
 
@@ -11,7 +12,7 @@ const AllQuotes = () => {
                     <h1 className="text-center text-2xl font-semibold text-gray-600">Loading Quotes...</h1>
                 ) : (
                     <div className="flex flex-wrap justify-center gap-6">
-                        {api.map((val, i) => (
+                        {api.length==0? <Loader/>:api.map((val, i) => (
                             <div
                                 key={i}
                                 className="flex flex-col justify-between w-full sm:w-[80%] md:w-[45%] lg:w-[30%] bg-white border-l-4 border-purple-400 p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"

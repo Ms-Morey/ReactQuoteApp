@@ -5,7 +5,7 @@ let helper = createContext()
 const AppContext = ({ children }) => {
     let [api, setApi] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3000/quotes').then((res) => {
+        axios.get('http://localhost:3000/quote').then((res) => {
             setApi(res.data)
         })
     }, [])
